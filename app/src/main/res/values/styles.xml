@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="counter">
+        <item name="android:textSize">@dimen/counter_text_size</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:background">@drawable/counter_background</item>
+        <item name="android:fontFamily">@font/anton</item>
+        <item name="android:padding">@dimen/counter_padding</item>
+    </style>
+</resources>

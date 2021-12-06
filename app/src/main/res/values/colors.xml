@@ -7,4 +7,22 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="OnPrimary">#FFFFFF</color>
+
+    <color name="text_color">#FFFFFF</color>
+    <color name="hint_text_color">#CDA93E</color>
+    <color name="click_button_color">#ADE669</color>
+    <color name="main_text_color_hint">#6DFBFBFB</color>
+    <color name="edit_text_color">#2BD6DC</color>
+    <color name="button_background_color">#DDBCC65A</color>
+    <color name="main_activity_background">#191919</color>
+    <color name="focused_box_stroke_color">#C182CC</color>
+
+    <array name="character_item_background_colors">
+        <item>#C182CC</item>
+        <item>#C3B856</item>
+        <item>#9AC865</item>
+        <item>#CCAF5A</item>
+        <item>#56B8C5</item>
+    </array>
 </resources>
