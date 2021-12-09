@@ -2,31 +2,35 @@ package com.example.ui_app_nikolai_kuts
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 
 const val QUANTITY_START_POSITION = 0
+const val ENTERED_TEXT_KEY = "entered_text"
+const val CLICK_QUANTITY = "click_quantity"
+const val CHARACTER_QUANTITY = "character_quantity"
 
-class MainViewModel : ViewModel() {
+class MainViewModel(private val savedStateHandle: SavedStateHandle) : ViewModel() {
 
-    val enteredText: LiveData<String> get() = _enteredText
-    val clickQuantity: LiveData<Int> get() = _clickQuantity
-    val characterQuantity: LiveData<Int> get() = _characterQuantity
-
-    private val _enteredText = MutableLiveData<String>()
-    private val _clickQuantity = MutableLiveData(QUANTITY_START_POSITION)
-    private val _characterQuantity = MutableLiveData(QUANTITY_START_POSITION)
+    val enteredText: LiveData<String> = savedStateHandle.getLiveData(ENTERED_TEXT_KEY)
+    val clickQuantity: LiveData<Int> = savedStateHandle.getLiveData(
+        CLICK_QUANTITY,
+        QUANTITY_START_POSITION
+    )
+    val characterQuantity: LiveData<Int> = savedStateHandle.getLiveData(
+        CHARACTER_QUANTITY,
+        QUANTITY_START_POSITION
+    )
 
     fun saveText(text: String) {
-        _enteredText.value = text
+        savedStateHandle[ENTERED_TEXT_KEY] = text
     }
 
     fun click() {
-        _clickQuantity.apply {
-            value?.let { clickQuantity -> value = clickQuantity + 1 }
-        }
+        savedStateHandle[CLICK_QUANTITY] = (clickQuantity.value ?: 0) + 1
     }
 
     fun setCharacterQuantity(quantity: Int) {
-        _characterQuantity.value = quantity
+        savedStateHandle[CHARACTER_QUANTITY] = quantity
     }
 }
