@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UI_App_Nikolai_Kuts</string>
+    <string name="hint_text">some text</string>
+    <string name="click_button">click</string>
 </resources>

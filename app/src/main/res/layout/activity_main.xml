@@ -4,15 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/main_activity_background">
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/entered_text_recycler_view_wrapper"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="20dp"
+        app:boxStrokeColor="@color/box_stroke_color"
+        android:maxWidth="@dimen/max_edit_text_width"
+        android:hint="@string/hint_text"
+        app:boxCornerRadiusTopEnd="@dimen/edit_text_corner"
+        app:boxCornerRadiusBottomStart="@dimen/edit_text_corner"
+        app:hintTextColor="@color/hint_text_color"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/click_button_color"
+        android:textColorHint="@color/main_text_color_hint"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/center_guideline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/entered_text_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:textColor="@color/edit_text_color"
+            android:inputType="textPersonName"
+            android:minWidth="@dimen/max_edit_text_width"
+            android:textSize="@dimen/edit_text_text_size" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/click_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/click_button"
+        android:textColor="@color/text_color"
+        app:backgroundTint="@color/button_background_color"
+        android:background="@drawable/button_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entered_text_recycler_view_wrapper" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/entered_text_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/center_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/entered_text_recycler_view_wrapper"
+        app:layout_constraintStart_toStartOf="@+id/entered_text_recycler_view_wrapper" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/character_counter_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/counter"
+        app:layout_constraintBottom_toBottomOf="@+id/click_counter_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/click_counter_text_view"
+        app:layout_constraintTop_toTopOf="@+id/click_counter_text_view"
+        tools:text="char_counter" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/click_counter_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/counter"
+        app:layout_constraintBottom_toTopOf="@+id/center_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/character_counter_text_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        tools:text="click_counter" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

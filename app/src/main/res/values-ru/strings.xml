@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UI_App_Nikolai_Kuts</string>
+    <string name="hint_text">какой-то текст</string>
+    <string name="click_button">клик</string>
+</resources>
