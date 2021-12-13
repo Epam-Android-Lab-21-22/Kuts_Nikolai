@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">UI_App_Nikolai_Kuts</string>
+    <string name="click_me">To second activity</string>
+    <string name="request_camera_permission">Request permission</string>
+    <string name="explanation_dialog_title">Permissions denied</string>
+    <string name="explationtion_dialog_message">This permission is necessary for working with the camera. Allow the permission to be able to use the camera</string>
+    <string name="denied_foreve_permission_dialog_title">Permissions denied</string>
+    <string name="denied_foreve_permission_dialog_message">You\'ve denied this permission.
+        But if you want to use the camera you need to allow the permission.\n\n
+        Would you like to open app settings to change you decision?</string>
+    <string name="dinied_forever_permission_dialog_button">Settings</string>
+    <string name="denied_forever_permission_toast">The permission denied forever</string>
+    <string name="no_network_message">No network</string>
+    <string name="there_is_network_message">There is network</string>
 </resources>
