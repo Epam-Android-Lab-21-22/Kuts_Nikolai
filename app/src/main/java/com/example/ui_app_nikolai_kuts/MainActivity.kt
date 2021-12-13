@@ -10,8 +10,6 @@ import android.net.NetworkRequest
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import com.example.ui_app_nikolai_kuts.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.BaseTransientBottomBar.ANIMATION_MODE_SLIDE
 import com.google.android.material.snackbar.Snackbar
