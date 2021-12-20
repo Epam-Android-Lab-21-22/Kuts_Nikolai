@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UI_App_Nikolai_Kuts</string>
+    <string name="red_title">Red</string>
+    <string name="blue_title">Blue</string>
+    <string name="green_title">Green</string>
+
+    <string name="action_bar_title">Stack: %1$s</string>
 </resources>

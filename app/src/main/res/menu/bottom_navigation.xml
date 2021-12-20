@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/red_nav_item"
+        android:icon="@drawable/ic_red"
+        android:title="@string/red_title"/>
+
+    <item android:id="@+id/blue_nav_item"
+        android:icon="@drawable/ic_blue"
+        android:title="@string/blue_title" />
+
+    <item android:id="@+id/green_nav_item"
+        android:icon="@drawable/ic_green"
+        android:title="@string/green_title" />
+</menu>
