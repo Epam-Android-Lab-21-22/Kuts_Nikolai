@@ -1,12 +1,11 @@
 package com.example.ui_app_nikolai_kuts
 
 import com.github.javafaker.Faker
-import org.jetbrains.annotations.NotNull
 
 class UserGenerator {
 
     private val faker = Faker.instance()
-    private val randomizingRange = (0..2)
+    private val randomizingRange = 0..2
 
     fun generateUsers(userQuantity: Int): List<User> {
         faker.address().country()
@@ -14,7 +13,7 @@ class UserGenerator {
             generateRandomTypeUser()
         }
     }
-    @NotNull
+
     private fun generateRandomTypeUser(): User {
         return when (randomizingRange.random()) {
             0 -> generateRandomRegularPerson()

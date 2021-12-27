@@ -1,7 +1,7 @@
 package com.example.ui_app_nikolai_kuts
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.ui_app_nikolai_kuts.User.RegularPerson
+import com.example.ui_app_nikolai_kuts.User.*
 
 class FirstDiffUtilCallback(
     private val oldList: List<User>,
@@ -21,13 +21,13 @@ class FirstDiffUtilCallback(
         val newItem = newList[newItemPosition]
         return when {
             areBothInstanceOf<RegularPerson>(old = oldItem, new = newItem) -> oldItem == newItem
-            areBothInstanceOf<User.Worker>(old = oldItem, new = newItem) -> oldItem == newItem
-            areBothInstanceOf<User.Customer>(old = oldItem, new = newItem) -> oldItem == newItem
+            areBothInstanceOf<Worker>(old = oldItem, new = newItem) -> oldItem == newItem
+            areBothInstanceOf<Customer>(old = oldItem, new = newItem) -> oldItem == newItem
             else -> false
         }
     }
 
-    private inline fun <reified T> areBothInstanceOf(old: User, new: User): Boolean {
+    private inline fun <reified T: User> areBothInstanceOf(old: User, new: User): Boolean {
         return old is T && new is T
     }
 }

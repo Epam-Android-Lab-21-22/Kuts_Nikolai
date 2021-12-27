@@ -1,4 +1,4 @@
-package com.example.ui_app_nikolai_kuts.SecondUI
+package com.example.ui_app_nikolai_kuts.second_ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

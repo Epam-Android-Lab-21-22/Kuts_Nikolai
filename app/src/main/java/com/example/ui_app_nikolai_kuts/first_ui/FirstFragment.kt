@@ -1,4 +1,4 @@
-package com.example.ui_app_nikolai_kuts.FirstUI
+package com.example.ui_app_nikolai_kuts.first_ui
 
 import android.os.Bundle
 import android.view.View
@@ -23,7 +23,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
             adapter = firstAdapter
         }
 
-        val users: List<User> = UserGenerator().generateUsers(30)
+        val users: List<User> = UserGenerator().generateUsers(userQuantity = 30)
         firstAdapter.updateData(users)
     }
 }

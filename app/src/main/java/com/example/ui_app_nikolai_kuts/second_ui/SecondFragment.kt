@@ -1,4 +1,4 @@
-package com.example.ui_app_nikolai_kuts.SecondUI
+package com.example.ui_app_nikolai_kuts.second_ui
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.ui_app_nikolai_kuts.ColorAssistant
 import com.example.ui_app_nikolai_kuts.R
-import com.example.ui_app_nikolai_kuts.SecondUI.SecondAdapter
 import com.example.ui_app_nikolai_kuts.databinding.FragmentSecondBinding
 
 private const val SPAN_COUNT = 3

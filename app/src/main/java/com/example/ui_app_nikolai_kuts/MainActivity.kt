@@ -6,8 +6,9 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.ui_app_nikolai_kuts.FirstUI.FirstFragment
+import com.example.ui_app_nikolai_kuts.first_ui.FirstFragment
 import com.example.ui_app_nikolai_kuts.databinding.ActivityMainBinding
+import com.example.ui_app_nikolai_kuts.second_ui.SecondFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
