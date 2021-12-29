@@ -33,4 +33,9 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             binding.secondRecyclerView.smoothScrollToPosition(secondAdapter.itemCount)
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.secondRecyclerView.adapter = null
+    }
 }

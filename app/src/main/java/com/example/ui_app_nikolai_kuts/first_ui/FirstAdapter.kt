@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ui_app_nikolai_kuts.FirstDiffUtilCallback
 import com.example.ui_app_nikolai_kuts.ItemTypes.*
+import com.example.ui_app_nikolai_kuts.UNKNOWN_ITEM_TYPE
 import com.example.ui_app_nikolai_kuts.User
 import com.example.ui_app_nikolai_kuts.databinding.ItemCustomerBinding
 import com.example.ui_app_nikolai_kuts.databinding.ItemRegularPersonBinding
@@ -38,7 +39,7 @@ class FirstAdapter : RecyclerView.Adapter<FirstViewHolder<out User>>() {
                 )
                 thirdTypeItemHolder
             }
-            else -> throw Exception("unknown item type")
+            else -> throw Exception(UNKNOWN_ITEM_TYPE)
         }
     }
 

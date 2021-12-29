@@ -26,4 +26,9 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
         val users: List<User> = UserGenerator().generateUsers(userQuantity = 30)
         firstAdapter.updateData(users)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.firstRecyclerView.adapter = null
+    }
 }
