@@ -32,7 +32,6 @@ class ItemColorSource private constructor(preferences: SharedPreferences) {
     val data: List<ItemColor> = _data
 
     init {
-//        saveInitialData()
         if (preferences.getBoolean(FIRST_RUNNING_KEY, true)) {
             saveInitialData()
             preferences.edit().putBoolean(FIRST_RUNNING_KEY, false).apply()

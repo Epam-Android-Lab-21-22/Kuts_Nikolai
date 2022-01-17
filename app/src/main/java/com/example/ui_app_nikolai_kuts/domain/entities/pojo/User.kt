@@ -1,7 +1,7 @@
 package com.example.ui_app_nikolai_kuts.domain.entities.pojo
 
 import com.example.ui_app_nikolai_kuts.domain.entities.enums.ItemTypes
-import com.example.ui_app_nikolai_kuts.domain.ListItem
+import com.example.ui_app_nikolai_kuts.presentation.common.ListItem
 
 sealed class User : ListItem {
 

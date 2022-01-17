@@ -1,6 +1,7 @@
 package com.example.ui_app_nikolai_kuts.presentation.presenters
 
 import android.content.SharedPreferences
+import com.example.ui_app_nikolai_kuts.data.common.TaskDelayMaker
 import com.example.ui_app_nikolai_kuts.data.repository_implementations.UserRepositoryImpl
 import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User
 import com.example.ui_app_nikolai_kuts.domain.repositories.UserRepository
@@ -19,7 +20,10 @@ class UserPresenter(private val view: UserView, sharedPreference: SharedPreferen
     }
 
     fun deleteUser(user: User) {
-        removeUser(user)
-        view.onDataUpdated(users = repository.getUsers())
+        TaskDelayMaker().perform(
+            latency = 2000,
+            task =  { removeUser(user) },
+            onFinish = { view.onDataUpdated(users = repository.getUsers()) }
+        )
     }
 }

@@ -1,6 +1,7 @@
 package com.example.ui_app_nikolai_kuts.presentation.presenters
 
 import android.content.SharedPreferences
+import com.example.ui_app_nikolai_kuts.data.common.TaskDelayMaker
 import com.example.ui_app_nikolai_kuts.data.repository_implementations.ItemColorRepositoryImpl
 import com.example.ui_app_nikolai_kuts.domain.repositories.ItemColorRepository
 import com.example.ui_app_nikolai_kuts.domain.use_cases.GetItemColors
@@ -18,7 +19,10 @@ class ItemColorPresenter(private val view: ItemColorView, preferences: SharedPre
     }
 
     fun addItemColor() {
-        createItemColor()
-        view.onDataUpdated(itemColors = repository.getItemColors())
+        TaskDelayMaker().perform(
+            latency = 1000,
+            task =  {createItemColor() },
+            onFinish = { view.onDataUpdated(itemColors = repository.getItemColors()) }
+        )
     }
 }

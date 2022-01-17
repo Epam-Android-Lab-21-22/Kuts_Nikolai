@@ -1,4 +1,4 @@
-package com.example.ui_app_nikolai_kuts.domain
+package com.example.ui_app_nikolai_kuts.presentation.common
 
 import com.example.ui_app_nikolai_kuts.domain.entities.enums.ItemTypes
 

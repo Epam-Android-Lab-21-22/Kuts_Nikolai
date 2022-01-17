@@ -1,16 +1,16 @@
 package com.example.ui_app_nikolai_kuts.data.common
 
-import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User
 import kotlinx.coroutines.*
 
 class TaskDelayMaker {
 
     private val scope = CoroutineScope(Dispatchers.IO)
 
-    fun<R> perform(latency: Long, task: () -> Unit, onGetResult: () -> Unit) {
+    fun perform(latency: Long, task: () -> Unit, onFinish: () -> Unit) {
         scope.launch {
+            task()
             delay(latency)
-            withContext(Dispatchers.Main) { onGetResult() }
+            withContext(Dispatchers.Main) { onFinish() }
         }
     }
 }

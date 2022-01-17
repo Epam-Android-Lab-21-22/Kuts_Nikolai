@@ -1,9 +1,7 @@
 package com.example.ui_app_nikolai_kuts.data.fake_databases
 
 import android.content.SharedPreferences
-import android.util.Log
 import com.example.ui_app_nikolai_kuts.data.common.StorageReadWriter
-import com.example.ui_app_nikolai_kuts.data.common.TaskDelayMaker
 import com.example.ui_app_nikolai_kuts.data.common.UserStorageReadWriter
 import com.example.ui_app_nikolai_kuts.data.common.UserGenerator
 import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User
@@ -32,7 +30,6 @@ class UserSource private constructor(preferences: SharedPreferences) {
 
 
     init {
-//        saveInitialData()
         if (preferences.getBoolean(FIRST_RUNNING_KEY, true)) {
             saveInitialData()
             preferences.edit().putBoolean(FIRST_RUNNING_KEY, false).apply()

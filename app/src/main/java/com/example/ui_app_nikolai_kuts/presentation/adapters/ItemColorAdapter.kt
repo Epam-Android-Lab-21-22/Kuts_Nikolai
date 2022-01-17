@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ui_app_nikolai_kuts.databinding.ItemColorLayoutBinding
 import com.example.ui_app_nikolai_kuts.domain.entities.pojo.ItemColor
 import com.example.ui_app_nikolai_kuts.domain.update
-import com.example.ui_app_nikolai_kuts.presentation.ColorAssistant
+import com.example.ui_app_nikolai_kuts.presentation.common.ColorAssistant
 
 class ItemColorAdapter : RecyclerView.Adapter<ItemColorAdapter.ViewHolder>() {
 

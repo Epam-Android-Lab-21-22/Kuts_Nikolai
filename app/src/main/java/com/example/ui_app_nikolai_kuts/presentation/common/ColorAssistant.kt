@@ -1,4 +1,4 @@
-package com.example.ui_app_nikolai_kuts.presentation
+package com.example.ui_app_nikolai_kuts.presentation.common
 
 import android.content.res.ColorStateList
 import android.graphics.Color
