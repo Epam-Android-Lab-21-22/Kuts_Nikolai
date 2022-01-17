@@ -1,4 +1,4 @@
-package com.example.ui_app_nikolai_kuts
+package com.example.ui_app_nikolai_kuts.presentation.common
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User

@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ui_app_nikolai_kuts.FirstDiffUtilCallback
+import com.example.ui_app_nikolai_kuts.presentation.common.FirstDiffUtilCallback
 import com.example.ui_app_nikolai_kuts.domain.entities.enums.ItemTypes.*
 import com.example.ui_app_nikolai_kuts.UNKNOWN_ITEM_TYPE
 import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User
