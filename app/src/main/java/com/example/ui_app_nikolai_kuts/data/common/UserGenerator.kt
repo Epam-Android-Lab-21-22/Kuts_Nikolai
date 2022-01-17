@@ -1,5 +1,6 @@
-package com.example.ui_app_nikolai_kuts
+package com.example.ui_app_nikolai_kuts.data.common
 
+import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User
 import com.github.javafaker.Faker
 
 class UserGenerator {

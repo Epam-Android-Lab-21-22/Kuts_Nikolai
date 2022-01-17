@@ -1,7 +1,8 @@
 package com.example.ui_app_nikolai_kuts
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.ui_app_nikolai_kuts.User.*
+import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User
+import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User.*
 
 class FirstDiffUtilCallback(
     private val oldList: List<User>,

@@ -1,21 +1,24 @@
-package com.example.ui_app_nikolai_kuts.first_ui
+package com.example.ui_app_nikolai_kuts.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ui_app_nikolai_kuts.FirstDiffUtilCallback
-import com.example.ui_app_nikolai_kuts.ItemTypes.*
+import com.example.ui_app_nikolai_kuts.domain.entities.enums.ItemTypes.*
 import com.example.ui_app_nikolai_kuts.UNKNOWN_ITEM_TYPE
-import com.example.ui_app_nikolai_kuts.User
+import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User
 import com.example.ui_app_nikolai_kuts.databinding.ItemCustomerBinding
 import com.example.ui_app_nikolai_kuts.databinding.ItemRegularPersonBinding
 import com.example.ui_app_nikolai_kuts.databinding.ItemWorkerBinding
-import com.example.ui_app_nikolai_kuts.first_ui.FirstViewHolder.*
-import com.example.ui_app_nikolai_kuts.update
+import com.example.ui_app_nikolai_kuts.presentation.view_holders.FirstViewHolder
+import com.example.ui_app_nikolai_kuts.presentation.view_holders.FirstViewHolder.*
+import com.example.ui_app_nikolai_kuts.domain.update
 import java.lang.Exception
 
-class FirstAdapter : RecyclerView.Adapter<FirstViewHolder<out User>>() {
+class UserAdapter(
+    private val onDeleteUser: (User) -> Unit,
+) : RecyclerView.Adapter<FirstViewHolder<out User>>() {
 
     private val users = mutableListOf<User>()
 
@@ -46,16 +49,13 @@ class FirstAdapter : RecyclerView.Adapter<FirstViewHolder<out User>>() {
     override fun onBindViewHolder(holder: FirstViewHolder<out User>, position: Int) {
         val user = users[position]
         when (holder) {
-            is FirstTypeItemHolder ->  {
+            is FirstTypeItemHolder -> {
                 holder.apply {
                     bind(user as User.RegularPerson)
 
                     binding.regularPersonCloseIcon.setOnClickListener {
                         if (absoluteAdapterPosition != RecyclerView.NO_POSITION) {
-                            val newUsers: List<User> = ArrayList(users).apply {
-                                remove(users[absoluteAdapterPosition])
-                            }
-                            updateUsers(newUsers)
+                            onDeleteUser(users[absoluteAdapterPosition])
                         }
                     }
                 }

@@ -1,8 +1,8 @@
-package com.example.ui_app_nikolai_kuts.first_ui
+package com.example.ui_app_nikolai_kuts.presentation.view_holders
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.example.ui_app_nikolai_kuts.User
+import com.example.ui_app_nikolai_kuts.domain.entities.pojo.User
 import com.example.ui_app_nikolai_kuts.databinding.ItemCustomerBinding
 import com.example.ui_app_nikolai_kuts.databinding.ItemRegularPersonBinding
 import com.example.ui_app_nikolai_kuts.databinding.ItemWorkerBinding

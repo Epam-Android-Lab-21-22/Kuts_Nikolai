@@ -1,4 +1,4 @@
-package com.example.ui_app_nikolai_kuts
+package com.example.ui_app_nikolai_kuts.domain.entities.enums
 
 enum class ItemTypes {
 
