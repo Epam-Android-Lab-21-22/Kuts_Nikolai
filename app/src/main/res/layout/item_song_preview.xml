@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/song_item_padding"
+    android:layout_margin="@dimen/song_item_margin"
+    android:background="@drawable/song_preview_item_background"
+    >
+
+    <TextView
+        android:id="@+id/songPreviewTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="TextView"
+        android:textStyle="bold"
+        android:textColor="#3E3E3E"
+        android:textSize="@dimen/song_preview_title_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/songPreviewPerformerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Performer"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songPreviewTitleTextView" />
+
+    <TextView
+        android:id="@+id/songPreviewCoverUrlTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="songPreviewCoverUrlText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songPreviewPerformerTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

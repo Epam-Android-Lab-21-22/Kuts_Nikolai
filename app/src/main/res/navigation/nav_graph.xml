@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.ui_app_nikolai_kuts.presentation.splash_screen.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_songPreviewFragment"
+            app:destination="@id/songPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/songPreviewFragment"
+        android:name="com.example.ui_app_nikolai_kuts.presentation.song_preview_screen.SongPreviewFragment"
+        android:label="fragment_song"
+        tools:layout="@layout/fragment_song">
+        <action
+            android:id="@+id/action_songPreviewFragment_to_songFragment"
+            app:destination="@id/songFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/songFragment"
+        android:name="com.example.ui_app_nikolai_kuts.presentation.song_screen.SongFragment"
+        android:label="fragment_song_previews"
+        tools:layout="@layout/fragment_song_previews" >
+        <argument
+            android:name="songId"
+            android:defaultValue="empty"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
