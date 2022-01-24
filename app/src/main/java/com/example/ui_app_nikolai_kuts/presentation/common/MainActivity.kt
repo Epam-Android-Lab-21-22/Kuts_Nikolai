@@ -12,17 +12,4 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_UI_App_Nikolai_Kuts)
         setContentView(R.layout.activity_main)
     }
-
-    override fun onBackPressed() {
-        finishOnSongPreviewFragmentBackPressed()
-    }
-
-    private fun finishOnSongPreviewFragmentBackPressed() {
-        findNavController(R.id.fragment_container_view).apply {
-            when (currentDestination) {
-                getBackStackEntry(R.id.songPreviewFragment).destination -> finish()
-                else -> super.onBackPressed()
-            }
-        }
-    }
 }

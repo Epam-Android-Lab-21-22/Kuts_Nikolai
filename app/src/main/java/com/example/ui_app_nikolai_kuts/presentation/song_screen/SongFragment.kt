@@ -27,22 +27,19 @@ class SongFragment : Fragment(R.layout.fragment_song) {
         }
     }
 
-    private fun getSongViewModel(): SongViewModel = ViewModelProvider(
-        this,
-        SongViewMoodleFactory(args.songId)
-    )[SongViewModel::class.java]
-
     private fun showToast(message: String) {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     private fun FragmentSongBinding.setContent(song: Song) {
-        songTextTextView.text = song.lyrics
-        songTitleTextView.text = song.title
-        songPerformerTextView.text = song.performer
-        songCoverUrlTextView.text = song.coverUrl
-        songAlbumTextView.text = song.album
-        songGenreTextView.text = song.genre
-        songYearTextView.text = song.year.toString()
+        with(song) {
+            songTextTextView.text = lyrics
+            songTitleTextView.text = title
+            songPerformerTextView.text = performer
+            songCoverUrlTextView.text = coverUrl
+            songAlbumTextView.text = album
+            songGenreTextView.text = genre
+            songYearTextView.text = year.toString()
+        }
     }
 }
