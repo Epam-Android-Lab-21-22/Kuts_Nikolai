@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -16,7 +17,7 @@ class SongFragment : Fragment(R.layout.fragment_song) {
 
     private val binding by viewBinding(FragmentSongBinding::bind)
     private val args by navArgs<SongFragmentArgs>()
-    private val viewModel: ISongViewModel by activityViewModels { SongViewMoodleFactory(args.songId) }
+    private val viewModel: ISongViewModel by viewModels { SongViewMoodleFactory(args.songId) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
