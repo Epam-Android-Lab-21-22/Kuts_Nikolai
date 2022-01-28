@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.song_screen.SongFragment">
+
+
+    <View
+        android:id="@+id/songInformationCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/song_info_background"
+        app:layout_constraintTop_toTopOf="@id/songInformationTextView"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintEnd_toEndOf="@id/contentEnd"
+        app:layout_constraintBottom_toBottomOf="@id/songGenreTextView"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guide_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentEnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guide_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guide_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contentBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/guide_margin" />
+
+    <TextView
+        android:id="@+id/songPerformerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/song_content_padding"
+        android:paddingEnd="@dimen/song_content_padding"
+        android:textSize="@dimen/song_performer_text_size"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/contentEnd"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toTopOf="@id/contentTop"
+        tools:text="performer" />
+
+    <TextView
+        android:id="@+id/songCoverUrlTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/song_content_padding"
+        tools:text="coverUrl"
+        app:layout_constraintEnd_toStartOf="@+id/contentEnd"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@+id/songPerformerTextView" />
+
+
+    <TextView
+        android:id="@+id/songAlbumPointerTextView"
+        style="@style/songInformationCardPointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/album"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/songInformationTextView" />
+
+    <TextView
+        android:id="@+id/songYearPointerTextView"
+        style="@style/songInformationCardPointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/released"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/songAlbumTextView" />
+
+    <TextView
+        android:id="@+id/songGenrePointerTextView"
+        style="@style/songInformationCardPointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/genre"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/songYearTextView" />
+
+    <TextView
+        android:id="@+id/songInformationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/song_content_padding"
+        android:text="@string/song_information"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/songCoverUrlTextView" />
+
+    <TextView
+        android:id="@+id/songAlbumTextView"
+        style="@style/songInformationCardContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/contentEnd"
+        app:layout_constraintStart_toEndOf="@+id/songAlbumPointerTextView"
+        app:layout_constraintTop_toBottomOf="@id/songInformationTextView"
+        tools:text="some album" />
+
+    <TextView
+        android:id="@+id/songYearTextView"
+        style="@style/songInformationCardContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/contentEnd"
+        app:layout_constraintStart_toEndOf="@+id/songYearPointerTextView"
+        app:layout_constraintTop_toBottomOf="@id/songAlbumTextView"
+        tools:text="some year" />
+
+    <TextView
+        android:id="@+id/songGenreTextView"
+        style="@style/songInformationCardContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/song_content_padding"
+        app:layout_constraintEnd_toEndOf="@id/contentEnd"
+        app:layout_constraintStart_toEndOf="@+id/songGenrePointerTextView"
+        app:layout_constraintTop_toBottomOf="@id/songYearTextView"
+        tools:text="some genre" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="songGenreTextView,
+         songAlbumTextView, songYearTextView"
+        />
+
+
+    <ScrollView
+        android:id="@+id/songScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/song_lyrics_scroll_view_background"
+        android:padding="@dimen/song_scroll_view_padding"
+        android:layout_marginTop="@dimen/song_scroll_view_margin_top"
+        app:layout_constraintBottom_toBottomOf="@id/contentBottom"
+        app:layout_constraintEnd_toEndOf="@id/contentEnd"
+        app:layout_constraintStart_toStartOf="@id/contentStart"
+        app:layout_constraintTop_toBottomOf="@id/songGenreTextView">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/songTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+
+                android:gravity="center"
+                android:padding="@dimen/song_content_padding"
+                tools:text="title" />
+
+            <TextView
+                android:id="@+id/songTextTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                tools:text="fdsfasdfds" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
