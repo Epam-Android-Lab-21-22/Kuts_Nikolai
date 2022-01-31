@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">UI_App_Nikolai_Kuts</string>
+    <string name="status_description_failed">The operation has been failed</string>
+    <string name="status_description_cannot_read">cannot read</string>
+    <string name="status_description_cannot_write">cannot write</string>
+    <string name="status_description_success">The operation has been successful</string>
+    <string name="save">save</string>
+    <string name="load">load</string>
+    <string name="shared_preferences">Shared Preferences</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="external_storage">External Storage</string>
+    <string name="database">Database</string>
 </resources>

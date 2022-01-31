@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UI_App_Nikolai_Kuts">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.main_screen.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
